@@ -4,7 +4,10 @@ CURRENT=$(pwd)
 USER=$(whoami)
 
 if [ ! -d ~/.ansible-laptop] then
-    echo "\033[0;32m Python install \033[0m"
+    echo "\033[0;32m Updating repository \033[0m"
+    sudo apt-get -y update
+
+    echo "\033[0;32m Install dependencies \033[0m"
     sudo apt-get install -y -qq python python-pip git git-core openssh-server
 
     echo "\033[0;32m Updating pip \033[0m"
